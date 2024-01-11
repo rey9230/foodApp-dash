@@ -6,6 +6,8 @@ import SidebarLayout from 'src/layouts/SidebarLayout';
 import BaseLayout from 'src/layouts/BaseLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
+import Login from 'src/content/pages/Login';
+import Signup from 'src/content/pages/Signup';
 
 const Loader = (Component) => (props) =>
   (
@@ -214,7 +216,28 @@ const routes: RouteObject[] = [
         element: <Forms />
       }
     ]
+  },
+  {
+    path: 'login',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <Login />,
+      },
+      ],
+  },
+  {
+    path: 'signup',
+    element: <SidebarLayout />,
+    children: [
+      {
+        path: '',
+        element: <Signup />,
+      },
+      ],
   }
+
 ];
 
 export default routes;
