@@ -218,7 +218,7 @@ const routes: RouteObject[] = [
     ]
   },
   {
-    path: 'login',
+    path: '/login',
     element: <SidebarLayout />,
     children: [
       {
@@ -228,7 +228,7 @@ const routes: RouteObject[] = [
       ],
   },
   {
-    path: 'signup',
+    path: '/signup',
     element: <SidebarLayout />,
     children: [
       {

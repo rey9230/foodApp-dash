@@ -31,6 +31,7 @@ import ChromeReaderModeTwoToneIcon from '@mui/icons-material/ChromeReaderModeTwo
 import WorkspacePremiumTwoToneIcon from '@mui/icons-material/WorkspacePremiumTwoTone';
 import CameraFrontTwoToneIcon from '@mui/icons-material/CameraFrontTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
+import { DataUsageRounded, VerifiedUser, VerifiedUserRounded } from '@mui/icons-material';
 
 const MenuWrapper = styled(Box)(
   ({ theme }) => `
@@ -413,6 +414,29 @@ function SidebarMenu() {
         >
           <SubMenuWrapper>
             <List component="div">
+
+            <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/login"
+                  startIcon={<VerifiedUser/>}
+                >
+                  Login
+                </Button>
+              </ListItem>
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/signup"
+                  startIcon={<DataUsageRounded/>}
+                >
+                  Sign Up
+                </Button>
+              </ListItem>
               <ListItem component="div">
                 <Button
                   disableRipple
